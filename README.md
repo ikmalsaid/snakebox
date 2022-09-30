@@ -75,7 +75,7 @@ curl -X PATCH -H 'Content-Type: application/json; charset=utf-8' \
 ```
 
 ## Example output from the API
-Here is one of the outputs that you will see while using the API:
+Here is an example output that you will get while using the API to send a message:
 ```
 [
     {
