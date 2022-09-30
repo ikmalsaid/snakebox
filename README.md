@@ -42,33 +42,34 @@ Finally, launch the API by using the following command:
 ```
 
 ### Using the API
+* It is important to note that this API will run on all addresses used by the server (including the localhost address) on port `5000`.
 * Accessing the home page of the API:
 ```
-curl -X GET 'http://127.0.0.1:5000'
+curl -X GET 'http://<external_ip_or_domain>:5000'
 ```
 * Sends a message to the API by specifying `"sender_name"` and `"sender_message"`:
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' \
 --data '{"sender_name":"ikmal","sender_message":"test message"}' \
-'http://127.0.0.1:5000/messages'
+'http://<external_ip_or_domain>:5000/messages'
 ```
 * Lists all messages stored by the API:
 ```
-curl -X GET 'http://127.0.0.1:5000/messages'
+curl -X GET 'http://<external_ip_or_domain>:5000/messages'
 ```
 * Lists a message from a specified `<message_id>`:
 ```
-curl -X GET 'http://127.0.0.1:5000/messages/<message_id>'
+curl -X GET 'http://<external_ip_or_domain>:5000/messages/<message_id>'
 ```
 * Deletes a message from a specified `<message_id>`:
 ```
-curl -X DELETE -I 'http://127.0.0.1:5000/messages/<message_id>'
+curl -X DELETE -I 'http://<external_ip_or_domain>:5000/messages/<message_id>'
 ```
 * Edits a sent message by specifying `<message_id>`, `"sender_name"` and `"sender_message"`:
 ```
 curl -X PATCH -H 'Content-Type: application/json; charset=utf-8' \
 --data '{"sender_name":"ikmal","sender_message":"test message"}' \
-'http://127.0.0.1:5000/messages/<message_id>'
+'http://<external_ip_or_domain>:5000/messages/<message_id>'
 ```
 
 ## Example output from the API
