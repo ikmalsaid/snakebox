@@ -8,14 +8,6 @@
 # sb_data.create_all()
 # exit()
 #
-# --- Curls to get you started! ---
-# curl -X GET 'https://snakebox-api.ikmalsaid.repl.co'
-# curl -X GET 'https://snakebox-api.ikmalsaid.repl.co/messages'
-# curl -X GET 'https://snakebox-api.ikmalsaid.repl.co/messages/<message_id>'
-# curl -X DELETE -I 'https://snakebox-api.ikmalsaid.repl.co/messages/<message_id>'
-# curl -X POST -H 'Content-Type: application/json; charset=utf-8' --data '{"sender_name":"ikmal","sender_message":"test message"}' 'https://snakebox-api.ikmalsaid.repl.co/messages'
-# curl -X PATCH -H 'Content-Type: application/json; charset=utf-8' --data '{"sender_name":"ikmal","sender_message":"test message"}' 'https://snakebox-api.ikmalsaid.repl.co/messages/<message_id>'
-#
 # Changelog:
 #    [30/09/22]
 #    - First release! Woohoo!
@@ -23,7 +15,7 @@
 #    - Code rewrite and optimizations.
 #
 
-import IP2Location
+import IP2Location, os
 from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
@@ -35,7 +27,7 @@ snakebx.config['JSON_SORT_KEYS'] = False
 snakebx.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 snakebx.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///snakebox-api_data/snakebox-api-database.db'
 
-magical = IP2Location.IP2Location('<your_location>/snakebox-api/snakebox-api_data/IP2LOCATION-LITE-DB3.BIN')
+magical = IP2Location.IP2Location(os.path.join('snakebox-api_data', 'IP2LOCATION-LITE-DB3.BIN'))
 homerun = {'project':'snakebox-api (contest version) by ikmalsaid',
            'description':'A quick and simple messaging API with IP2Location integration.',
            'message':'Welcome! Please refer README.MD for usage instructions.'}
