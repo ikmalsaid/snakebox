@@ -25,10 +25,16 @@ $ python -m venv env
 $ source env/bin/activate
 (env) $ pip install -r requirements.txt
 ```
-To save time, the following files are included with the repository:
+To save time, the following file is included with the repository:
 ```
 snakebox-api_data/IP2LOCATION-LITE-DB3.BIN (The free version of IP2Location DB3 Database)
-snakebox-api_data/snakebox-api-database.db (An empty database prepared for the project)
+```
+Now, create an empty database by using the commands below:
+```
+(env) $ python
+>>> from main import sb_data
+>>> sb_data.create_all()
+>>> exit()
 ```
 Finally, launch the API by using the following command:
 ```
