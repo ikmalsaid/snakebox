@@ -56,6 +56,7 @@ def magic_wand():
     global ip_address, country, region, city
     if request.environ.get('HTTP_X_FORWARDED_FOR') is None: ip_address = request.environ['REMOTE_ADDR']
     else: ip_address = request.environ['HTTP_X_FORWARDED_FOR']
+    if ip_address == '127.0.0.1': ip_address = '1.1.1.1' # Fallback IP for when using localhost address
     results = magical.get_all(ip_address)
     country = results.country_short
     region  = results.region
