@@ -35,7 +35,7 @@ snakebx.config['JSON_SORT_KEYS'] = False
 snakebx.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 snakebx.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///snakebox-api_data/snakebox-api-database.db'
 
-magical = IP2Location.IP2Location('/home/runner/snakebox-api/snakebox-api_data/IP2LOCATION-LITE-DB3.BIN')
+magical = IP2Location.IP2Location('<your_location>/snakebox-api/snakebox-api_data/IP2LOCATION-LITE-DB3.BIN')
 homerun = {'project':'snakebox-api (contest version) by ikmalsaid',
            'description':'A quick and simple messaging API with IP2Location integration.',
            'message':'Welcome! Please refer README.MD for usage instructions.'}
