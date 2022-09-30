@@ -90,7 +90,7 @@ Here is an example output that you will get after successfully using the API to 
 ```
 
 ## License
-This is free software, licensed under the MIT license.
+This is a free software, licensed under the MIT license.
 
 ## IP2Location Databases
 - [Free Version](https://lite.ip2location.com/)
