@@ -2,8 +2,7 @@
 **snakebox-api** is a quick and simple messaging API with IP2Location integration.
 
 ## Introduction
-Hi, my name is `Muhamad Nur Ikmal bin Mohd Said` and I'm from `Malaysia`. With all the challenges that I faced, I'm now finally completed this project.
-**snakebox-api** is a lightweight REST API that is built to serve instant messaging services with integration of geolocation technology
+Hi, my name is **Muhamad Nur Ikmal bin Mohd Said** and I'm from **Malaysia**. With all the challenges that I faced, I'm now finally completed this project. **snakebox-api** is a lightweight REST API that is built to serve instant messaging services with integration of geolocation technology
 provided by the one and only, **IP2Location.com**!
 
 ## Features
