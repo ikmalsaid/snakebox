@@ -2,7 +2,7 @@
 **snakebox-api** is a quick and simple messaging API with IP2Location integration.
 
 ## Introduction
-Hi, my name is `Muhamad Nur Ikmal bin Mohd Said` and I'm from `Malaysia`. With all the challenges that I faced, I finally finished this project.
+Hi, my name is `Muhamad Nur Ikmal bin Mohd Said` and I'm from `Malaysia`. With all the challenges that I faced, I'm now finally completed this project.
 **snakebox-api** is a lightweight REST API that is built to serve instant messaging services with integration of geolocation technology
 provided by the one and only, **IP2Location.com**!
 
@@ -43,33 +43,35 @@ Finally, launch the API by using the following command:
 
 ### Using the API
 * It is important to note that this API will run on all addresses used by the server (including the localhost address) on port `5000`.
+* Also, note that when testing the API using a localhost address, the IP address used for geolocation will fallback to `1.1.1.1`.
+
 * Accessing the home page of the API:
 ```
-curl -X GET 'http://<external_ip_or_domain>:5000'
+curl -X GET 'http://<localhost_or_external_ip_or_domain>:5000'
 ```
 * Sends a message to the API by specifying `"sender_name"` and `"sender_message"`:
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' \
 --data '{"sender_name":"ikmal","sender_message":"test message"}' \
-'http://<external_ip_or_domain>:5000/messages'
+'http://<localhost_or_external_ip_or_domain>:5000/messages'
 ```
 * Lists all messages stored by the API:
 ```
-curl -X GET 'http://<external_ip_or_domain>:5000/messages'
+curl -X GET 'http://<localhost_or_external_ip_or_domain>:5000/messages'
 ```
 * Lists a message from a specified `<message_id>`:
 ```
-curl -X GET 'http://<external_ip_or_domain>:5000/messages/<message_id>'
+curl -X GET 'http://<localhost_or_external_ip_or_domain>:5000/messages/<message_id>'
 ```
 * Deletes a message from a specified `<message_id>`:
 ```
-curl -X DELETE -I 'http://<external_ip_or_domain>:5000/messages/<message_id>'
+curl -X DELETE -I 'http://<localhost_or_external_ip_or_domain>:5000/messages/<message_id>'
 ```
 * Edits a sent message by specifying `<message_id>`, `"sender_name"` and `"sender_message"`:
 ```
 curl -X PATCH -H 'Content-Type: application/json; charset=utf-8' \
 --data '{"sender_name":"ikmal","sender_message":"test message"}' \
-'http://<external_ip_or_domain>:5000/messages/<message_id>'
+'http://<localhost_or_external_ip_or_domain>:5000/messages/<message_id>'
 ```
 
 ## Example output from the API
