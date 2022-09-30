@@ -46,6 +46,12 @@ Finally, launch the API by using the following command:
 ```
 curl -X GET 'http://127.0.0.1:5000'
 ```
+* Sends a message to the API by specifying `"sender_name"` and `"sender_message"`:
+```
+curl -X POST -H 'Content-Type: application/json; charset=utf-8' \
+--data '{"sender_name":"ikmal","sender_message":"test message"}' \
+'http://127.0.0.1:5000/messages'
+```
 * Lists all messages stored by the API:
 ```
 curl -X GET 'http://127.0.0.1:5000/messages'
@@ -58,13 +64,11 @@ curl -X GET 'http://127.0.0.1:5000/messages/<message_id>'
 ```
 curl -X DELETE -I 'http://127.0.0.1:5000/messages/<message_id>'
 ```
-* Sends a message to the API by specifying `"sender_name"` and `"sender_message"`:
-```
-curl -X POST -H 'Content-Type: application/json; charset=utf-8' --data '{"sender_name":"ikmal","sender_message":"test message"}' 'http://127.0.0.1:5000/messages'
-```
 * Edits a sent message by specifying `<message_id>`, `"sender_name"` and `"sender_message"`:
 ```
-curl -X PATCH -H 'Content-Type: application/json; charset=utf-8' --data '{"sender_name":"ikmal","sender_message":"test message"}' 'http://127.0.0.1:5000/messages/<message_id>'
+curl -X PATCH -H 'Content-Type: application/json; charset=utf-8' \
+--data '{"sender_name":"ikmal","sender_message":"test message"}' \
+'http://127.0.0.1:5000/messages/<message_id>'
 ```
 
 ## Example output from the API
