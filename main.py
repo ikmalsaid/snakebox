@@ -3,11 +3,6 @@
 # Source    : https://github.com/ikmalsaid/snakebox-api
 # Date      : 30/09/2022
 #
-# --- Initialize DB before using! ---
-# from main import sb_data
-# sb_data.create_all()
-# exit()
-#
 # Changelog:
 #    [30/09/22]
 #    - First release! Woohoo!
