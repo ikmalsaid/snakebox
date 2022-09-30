@@ -137,4 +137,4 @@ abigail.add_resource(MessagesBasic, '/messages')
 abigail.add_resource(MessagesAdvanced, '/messages/<int:message_id>')
 
 if __name__ == '__main__':
-    snakebx.run(host='0.0.0.0', port=81, debug=True)
+    snakebx.run(debug=True)
