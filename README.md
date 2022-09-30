@@ -41,8 +41,7 @@ Finally, launch the API by using the following command:
 ```
 
 ### Using the API
-* It is important to note that this API will run on all addresses used by the server (including the localhost address) on port `5000`.
-* Also, note that when testing the API using a localhost address, the IP address used for geolocation will fallback to `1.1.1.1`.
+* It is important to note that this API will run on all addresses used by the server (including the localhost address) on port `5000`. Also note that when testing the API using a localhost address, the IP address used for geolocation will fallback to `1.1.1.1`.
 
 * Accessing the home page of the API:
 ```
